@@ -7,17 +7,17 @@ const u = require('util');
 const request = u.promisify(require('request'));
 const as = process.argv.slice(2);
 
-async function starwarsCharacters (film) {
+async function characterPrinter (film) {
   const url = 'https://swapi-api.hbtn.io/api/films/' + film;
   let d = await (await request(url)).body;
   d = JSON.parse(d);
-  const characters = d.characters;
-  for (let index = 0; index < characters.length; index++) {
-    const urlCharacter = characters[index];
-    let character = await (await request(urlCharacter)).body;
-    character = JSON.parse(character);
+  const chars = d.characters;
+  for (let index = 0; index < chars.length; index++) {
+    const urlCharacter = chars[index];
+    let char = await (await request(urlCharacter)).body;
+    char = JSON.parse(character);
     console.log(character.name);
   }
 }
 
-starwarsCharacters(as[0]);
+characterPrinter(as[0]);
