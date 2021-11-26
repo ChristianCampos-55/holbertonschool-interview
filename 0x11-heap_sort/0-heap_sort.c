@@ -1,4 +1,4 @@
-#include "heap_sorter.h"
+#include "sort.h"
 #include <stdio.h>
 #include <stdlib.h>
 
