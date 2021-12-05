@@ -1,6 +1,6 @@
 #include "search_algos.h"
 
-/*
+/**
 * advanced_binary - Finds position of an item in sorted array
 * @array: array vector
 * @size: lenght of array
@@ -13,7 +13,7 @@ int advanced_binary(int *array, size_t size, int value)
 	return (rec(array, array, size, value));
 }
 
-/*
+/**
 * rec - finds position of an item in sorted array
 * @array: array vector
 * @copy: copy of array vector
