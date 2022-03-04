@@ -23,7 +23,7 @@ int actual_checker(const binary_tree_t *tree, int m, int ma, int *h)
 		!actual_checker(tree->right, tree->n, ma, &counter))
 		return (0);
 
-	*h = ma(holder, counter) + 1;
+	*h = MAX(holder, counter) + 1;
 	return (ABS(holder - counter) <= 1);
 }
 
