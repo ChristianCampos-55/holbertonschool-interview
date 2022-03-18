@@ -14,5 +14,5 @@ def pascal_triangle(n):
         if anu:
             for j in range(i):
                 c.append(sum(anu[-1][j:j+2]))
-        a.append(c)
+        anu.append(c)
     return anu
